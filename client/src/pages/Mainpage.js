@@ -6,9 +6,9 @@ import '../App.css';
 function Main() {
     return (
         <div className="main">
-        <Card>
+        <Card className="mainImg">
 
-        <img src={logo}/>
+        <img className="imageFrame" src={logo}/>
 
 
         </Card>

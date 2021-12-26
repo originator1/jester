@@ -7,7 +7,7 @@ import {
     Button,
 
 } from 'react-bootstrap';
-import "../App.css";
+// import "../App.css";
 
 
 import { useQuery, useMutation } from '@apollo/client';
@@ -22,6 +22,18 @@ import image from '../jester2.jpg';
 function CurrentTask() {
     const { loading, data } = useQuery(QUERY_JESTS);
     const [removeJest, { error }] = useMutation(REMOVE_JEST);
+
+    // const addLike = async () => {
+    //     const [ likes, setAddLike ] = useState(data.allJests.likes);
+    //     const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    //     if (!token) {
+    //         console.log("currenttask like function token null -check-");
+    //         return false;
+    //     }else {
+    //         console.log("theese me likesssss", likes);
+    //     }
+    // };
 
 
     const userData = data?.allJests || {};
@@ -109,6 +121,7 @@ function CurrentTask() {
                                     <Card.Title>{jest.jestTaskDescription}</Card.Title>
                                     <Card.Text>{jest.caption}</Card.Text>
                                     <p>likes: {jest.likes}</p>
+                                    {/* <button onclick={addLike}>like</button> */}
                                    
                                 </Card.Body>
                             </Card>
