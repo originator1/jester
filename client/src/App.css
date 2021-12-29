@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Quicksand&display=swap');
+
 .App {
   text-align: center;
 }
@@ -19,6 +22,7 @@
   background-color: #F2B441;
 }
 
+
 h3 {
   font-size:x-large;
   text-align: center;
@@ -30,7 +34,7 @@ h3 {
 
 .brand {
   font-weight: bolder;
-  font-family: bookman;
+  font-family: 'Quicksand', sans-serif;;
   font-style: italic;
   font-size: xx-large;
   color: #4F0359;
@@ -38,9 +42,13 @@ h3 {
 
 .navLink {
   font-weight: bolder;
-  font-family: bookman;
+  font-family: 'Quicksand', sans-serif;
   font-style: italic;
   font-size: x-large;
+}
+
+.navLink:hover {
+  color: white;
 }
 
 
@@ -70,20 +78,37 @@ h3 {
 
 .currenttask {
   background-color: #1E0126;
-  min-height: 83vh;
+  
 }
 
 .profile {
   background-color: #1E0126;
-  min-height: 83vh;
+  min-height: 84vh;
 }
 
 .jumbotron {
-  background-color: #4F0359;
-  color: #F2B441;
+  background-color: #F2B441;
+  color: #4F0359;
+  width: 60%;
+  margin: auto;
+  border-radius: 10px;
+}
+.jumbotron h3 {
+  color: #4F0359;
+  font-size: 2.2em;
+  font-family: 'Dosis', sans-serif;
+}
+.submissionTitle {
+  font-family: 'Quicksand', sans-serif;
 }
 .newJest {
   color:#F2B441;
+  /* padding-bottom: 3vh; */
+  padding: 7%;
+  width: 100%;
+}
+.newJest form {
+  /* width: 80vw; */
 }
 .jestBtn {
   color:#F2B441;
@@ -91,6 +116,7 @@ h3 {
 .jestsTitle {
   color: #F2B441;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* ========================================================= */

@@ -50,6 +50,15 @@ mutation removeJest($_id: ID!){
 }
 `;
 
+export const UPDATE_LIKE = gql`
+mutation updateLike{
+  updateLike(_id: $arg) {
+    likes
+  
+  }
+}
+`;
+
 export const NEW_JEST = gql`
 mutation newJest($caption: String!, $image: String!){
   newJest(caption: $caption, image: $image) {

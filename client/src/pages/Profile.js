@@ -19,7 +19,7 @@ import Auth from '../utils/auth';
 
 function Profile() {
   const { loading, data } = useQuery(QUERY_PROFILEJESTS);
-  const [removeJest, { error }] = useMutation(REMOVE_JEST);
+  const [removeJest] = useMutation(REMOVE_JEST);
 
   const userData = data?.profile || {};
 

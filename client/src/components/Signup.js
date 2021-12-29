@@ -20,7 +20,7 @@ const SignupForm = () => {
   const [showAlert, setShowAlert] = useState(false);
 
   const [addUser, { error }] = useMutation(ADD_USER);
-  // console.log(addUser)
+  // console.log("me adding a new user.....", addUser)
   useEffect(() => {
     if (error) {
       setShowAlert(true);
@@ -49,6 +49,7 @@ const SignupForm = () => {
         variables: { ...userFormData },
       });
       // console.log(data);
+      //====what does data.addUser.token return===
       Auth.login(data.addUser.token);
     } catch (err) {
       console.error(err);

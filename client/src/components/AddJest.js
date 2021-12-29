@@ -77,11 +77,12 @@ const AddJestForm = () => {
 
     return (
         <>
-            <div className="newJest" style={{
+            {/* <div className="newJest" style={{
                 display: 'block',
-                width: 700,
+                width: 100%,
                 padding: 30,
-            }}>
+            }}> */}
+            <div className="newJest">
 
 
                 {/* This is needed for the validation functionality above */}

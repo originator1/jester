@@ -90,6 +90,27 @@ const resolvers = {
         );
         return deletedjest;
       }
+    },
+
+    updateLike: async (parent, arg, context) => {
+      // if (context.user) {
+      //   console.log("UPDATELIKES FIRING", jestId);
+      //   const newLikesJest = await Jest.findOneAndUpdate(
+      //     // {_id: args._id}, {likes: args.likes}, { new: true}
+      //     {_id: jestId}
+      //   );
+      //   return newLikesJest;
+      
+      // }else {
+      //   console.log("not logged in, please return to login page to proceed.")
+      // }
+      
+        console.log("jest id from the resolvers", arg);
+        const newLikesJest = await Jest.findOneAndUpdate(
+          { _id: arg }, { $inc: {likes: 1}}, { new: true }
+        );
+        return newLikesJest;
+      
     }
     
   },

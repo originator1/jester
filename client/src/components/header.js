@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Header, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import Icon from "../images/testheader1.jpg";
 
 

@@ -12,7 +12,7 @@ import MainPage from './pages/Mainpage';
 import CurrentTask from './pages/CurrentTask';
 import Profile from './pages/Profile';
 import Rules from './pages/Rules';
-import AddJest from './components/AddJest';
+// import AddJest from './components/AddJest';
 import Header from './components/header';
 
 // import SavedBooks from './pages/SavedBooks';

@@ -38,8 +38,6 @@ const typeDefs = gql`
     
   }
   
- 
-
   type Query {
     user: User
     tasks: [Task]
@@ -54,6 +52,7 @@ const typeDefs = gql`
     saveJest(jestData: JestInput!): Task
     removeJest(jestId: ID!): Jest
     newJest(caption: String!, image: String!): Jest
+    updateLike(_id: ID!): Jest
   }
 `;
 

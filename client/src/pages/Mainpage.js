@@ -8,7 +8,7 @@ function Main() {
         <div className="main">
         <Card className="mainImg">
 
-        <img className="imageFrame" src={logo}/>
+        <img className="imageFrame" src={logo} alt="landing page large logo"/>
 
 
         </Card>
