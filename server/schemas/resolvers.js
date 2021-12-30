@@ -92,7 +92,12 @@ const resolvers = {
       }
     },
 
-    updateLike: async (parent, arg, context) => {
+    updateLike: async (parent, { jestId }) => {
+      console.log(parent);
+      console.log("resolverssssssssss arg var", jestId)
+      return Jest.findOneAndUpdate(
+        {_id: jestId}, { $inc: {likes: 1}}, { new: true }
+      );
       // if (context.user) {
       //   console.log("UPDATELIKES FIRING", jestId);
       //   const newLikesJest = await Jest.findOneAndUpdate(
@@ -106,10 +111,8 @@ const resolvers = {
       // }
       
         console.log("jest id from the resolvers", arg);
-        const newLikesJest = await Jest.findOneAndUpdate(
-          { _id: arg }, { $inc: {likes: 1}}, { new: true }
-        );
-        return newLikesJest;
+        
+        // return newLikesJest;
       
     }
     

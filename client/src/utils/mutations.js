@@ -51,10 +51,9 @@ mutation removeJest($_id: ID!){
 `;
 
 export const UPDATE_LIKE = gql`
-mutation updateLike{
-  updateLike(_id: $arg) {
+mutation updateLike($jestId: ID!){
+  updateLike(jestId: $jestId) {
     likes
-  
   }
 }
 `;

@@ -52,7 +52,7 @@ const typeDefs = gql`
     saveJest(jestData: JestInput!): Task
     removeJest(jestId: ID!): Jest
     newJest(caption: String!, image: String!): Jest
-    updateLike(_id: ID!): Jest
+    updateLike(jestId: ID!): Jest
   }
 `;
 
