@@ -7,10 +7,11 @@
 
 .mainImg {
   border: none;
+  position: static;
 }
 /* actual image from main page */
 .imageFrame {
-  height: 83vh;
+  height: 90vh;
 }
 
 .header {
@@ -20,6 +21,7 @@
 
 .navbar {
   background-color: #F2B441;
+  height: 10vh;
 }
 
 
@@ -35,9 +37,11 @@ h3 {
 .brand {
   font-weight: bolder;
   font-family: 'Quicksand', sans-serif;;
-  font-style: italic;
-  font-size: xx-large;
-  color: #4F0359;
+  font-size: xxx-large;
+  color: white;
+}
+#brandName {
+  color: #420253;
 }
 
 .navLink {
@@ -45,6 +49,17 @@ h3 {
   font-family: 'Quicksand', sans-serif;
   font-style: italic;
   font-size: x-large;
+  border-bottom:#4F0359 solid 2px;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 1vh;
+}
+
+#navbar a {
+  color: #4F0359;
+}
+#navbar a:hover {
+  color: white;
 }
 
 .navLink:hover {
@@ -60,6 +75,9 @@ h3 {
   height: 83vh;
 }
 
+#mainTitle {
+  border-radius: 0px 0px 10px 10px;
+}
 .rules {
   color: #19FF5A;
   background-color: #1E0126;
@@ -72,9 +90,19 @@ h3 {
 }
 
 .rulecard {
-  background-color: #18B532;
+  background-color: #F2B441;
   color:#4F0359;
+  width: 60vw;
+  margin-top: 2vh;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3em;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* .rulesTitle {
+  
+} */
 
 .currenttask {
   background-color: #1E0126;
@@ -83,7 +111,7 @@ h3 {
 
 .profile {
   background-color: #1E0126;
-  min-height: 84vh;
+  min-height: 90vh;
 }
 
 .jumbotron {
@@ -100,18 +128,29 @@ h3 {
 }
 .submissionTitle {
   font-family: 'Quicksand', sans-serif;
+  padding-bottom: 3vh;
+  padding-top: 3.5vh;
 }
 .newJest {
   color:#F2B441;
   /* padding-bottom: 3vh; */
   padding: 7%;
-  width: 100%;
+  margin-right: auto; 
+  margin-left: auto;
+  width: 70%;
 }
-.newJest form {
+
+/* .newJest form {
   /* width: 80vw; */
-}
+
 .jestBtn {
   color:#F2B441;
+  margin-top: 2vh;
+}
+.btn:disabled {
+  opacity: 1;
+  background-color: #F2B441;
+  color: #1E0126;
 }
 .jestsTitle {
   color: #F2B441;
@@ -121,5 +160,35 @@ h3 {
 
 /* ========================================================= */
 .headercard{
-max-height: 90px;
+  background-color: #F2B441;
+  border: none;
+}
+
+.headImg {
+  height: 10vh;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+#navbar {
+  color: white;
+}
+.hamBox {
+  background-color:#F2B441;
+  text-align: center;
+  z-index: 0;
+  
+}
+
+div.rulecard.card {
+  position: static;
+}
+
+/* .hamBox > * {
+  z-index: 1;
+} */
+#hamburgerClick {
+  color: white;
+  background-color: #F2B441;
+  z-index: 1;
+  text-align: center;
 }

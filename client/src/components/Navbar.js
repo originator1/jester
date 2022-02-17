@@ -20,14 +20,14 @@ const AppNavbar = () => {
 
         <Navbar expand="lg">
           <Container fluid>
-            <Navbar.Brand as={Link} to="/" className="brand">
+            <Navbar.Brand as={Link} to="/" className="brand" id="brandName">
               {/* check this for accuracy */}
-              Jester
+              JesterApp
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar" />
             <Navbar.Collapse id="navbar">
-              <Nav className="ml-auto">
-                {/* if user is logged in show saved books and logout */}
+              <Nav className="ml-auto hamBox">
+                {/* if user is logged in show saved jests and logout */}
                 {Auth.loggedIn() ? (
                   <>
                     <Nav.Link as={Link} to="/Profile" className="navLink">
@@ -48,7 +48,7 @@ const AppNavbar = () => {
                     </Nav.Link>
                   </>
                 ) : (
-                  <Nav.Link onClick={() => setShowModal(true)} className="navLink">PLAY</Nav.Link>
+                  <Nav.Link onClick={() => setShowModal(true)} className="navLink" id="hamburgerClick">PLAY</Nav.Link>
                 )}
               </Nav>
             </Navbar.Collapse>

@@ -6,15 +6,15 @@ function Rules() {
   return (
     <>
       <div className="rules">
-        <Jumbotron className="jumbotron">
-          <Container>
+        <Jumbotron id="mainTitle">
+          <Container className="rulesTitle">
             <h3>How to play Jester</h3>
           </Container>
         </Jumbotron>
         <Container>
-          <CardColumns>
+          
             <Card className="rulecard">
-              <Card.Title>Step 1:</Card.Title>. Don't talk about Jester.
+              <Card.Title>Step 1:</Card.Title> Don't talk about Jester.
             </Card>
             <Card className="rulecard">
               <Card.Title>Step 2:</Card.Title>
@@ -36,7 +36,7 @@ function Rules() {
               <Card.Title>Step 6</Card.Title>
               Like your favorite pic. Winner is the Jest with the most likes.  
             </Card>
-          </CardColumns>
+         
         </Container>
         {/* 4 cards of blah blah blah */}
       </div>

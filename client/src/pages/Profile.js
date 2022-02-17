@@ -27,10 +27,7 @@ function Profile() {
 
 
   const handleDeleteJest = async (jestId) => {
-
-    // get token
-
-
+    //check if user is logged in, if so run getToken
     const token = Auth.loggedIn() ? Auth.getToken() : null;
     // console.log("====================",token)
     if (!token) {
@@ -41,12 +38,12 @@ function Profile() {
       await removeJest({
         variables: { _id: jestId }
       });
-      console.log("========================inside try")
+      // console.log("========================inside try")
       //refresh page when jest is deleted 
       window.location.reload(false);
 
     } catch (err) {
-      console.log("==============================OUTSIDE TRY")
+      // console.log("==============================OUTSIDE TRY")
       console.error(err);
     }
   };
@@ -87,13 +84,13 @@ function Profile() {
                   ) : null}
                   <Card.Body>
                     <Card.Title>{jest.caption}</Card.Title>
-                    <Card.Text>{jest.likes}</Card.Text>
+                    <Card.Text>Likes: {jest.likes}</Card.Text>
                     <Button
                       data-jestid={jest._id}
                       className="btn-block btn-danger"
                       onClick={() => handleDeleteJest(jest._id)}
                     >
-                      Delete this Jest!
+                      Delete!
                     </Button>
                   </Card.Body>
                 </Card>

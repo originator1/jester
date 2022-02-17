@@ -87,7 +87,7 @@ const AddJestForm = () => {
 
                 {/* This is needed for the validation functionality above */}
                 <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-
+                    
                     <Alert
                         dismissible
                         onClose={() => setShowAlert(false)}
@@ -96,7 +96,7 @@ const AddJestForm = () => {
                     >
                         There was a problem with your submission. Please try again.
                     </Alert>
-
+                    
                     <Form.Group>
                         <Form.Label htmlFor="caption">Description</Form.Label>
                         <Form.Control

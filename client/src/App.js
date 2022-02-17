@@ -12,14 +12,15 @@ import MainPage from './pages/Mainpage';
 import CurrentTask from './pages/CurrentTask';
 import Profile from './pages/Profile';
 import Rules from './pages/Rules';
+// import Header from './components/header';
 // import AddJest from './components/AddJest';
-import Header from './components/header';
 
-// import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
+  //default uri endpoint value is graphql
+  //uri can also be a function that accepts an Operation object and returns the string URL to use for that operation
   uri: '/graphql',
 });
 
@@ -47,7 +48,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-          <Header />
+          {/* <Header /> */}
           <Navbar />
           
           <Switch>

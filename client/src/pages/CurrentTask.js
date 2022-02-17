@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Jumbotron,
     Container,
@@ -7,21 +7,18 @@ import {
     Button,
 
 } from 'react-bootstrap';
-// import "../App.css";
 
-
+//apollo cleint hook imports
 import { useQuery, useMutation} from '@apollo/client';
+//query jests data
 import { QUERY_JESTS } from '../utils/queries';
-// import { REMOVE_JEST, UPDATE_LIKE } from '../utils/mutations';
-
 //update likes mutation
 import { UPDATE_LIKE } from '../utils/mutations';
-
-// import { removeJestId } from '../utils/localStorage';
+//importing addJest component
 import AddJest from '../components/AddJest';
 
 import Auth from '../utils/auth';
-// import image from '../jester2.jpg';
+
 
 function CurrentTask() {
     const { loading, data } = useQuery(QUERY_JESTS);
@@ -30,9 +27,10 @@ function CurrentTask() {
     // console.log("original data======", data);
     // const [updateLike, { error }] = useMutation(UPDATE_LIKE);
 
-     // when like button clicked function fires
-    //takes current jest and updates likes field to add one 
+    // when like button clicked function fires
+    //takes current jest and updates likes field to increment by 1 
     const [updateLike] = useMutation(UPDATE_LIKE, {
+        //refresh query data
         refetchQueries: mutationResult => [{query: QUERY_JESTS}]
     });
 
@@ -51,7 +49,7 @@ function CurrentTask() {
             <Jumbotron fluid className="jumbotron">
                 <Container>
                     <h3>Current Task:</h3>
-                    <h3> A ridiculous Christmas sweater</h3>
+                    <h3></h3>
                 </Container>
             </Jumbotron>
             <Container >
@@ -64,8 +62,7 @@ function CurrentTask() {
                 
                 <CardColumns>
                     {userData.map((jest, i) => {
-                        // console.log(jest, i)
-                        // console.log("each jest inside the returned map html", jest);
+        
                         return (
                             <Card key={jest._id} border="dark">
                                 {jest.image ? (
@@ -78,7 +75,7 @@ function CurrentTask() {
                                 <Card.Body>
                                     <Card.Title>{jest.jestTaskDescription}</Card.Title>
                                     <Card.Text>{jest.caption}</Card.Text>
-                                    <p>likes: {jest.likes}</p>
+                                    <p>Likes: {jest.likes}</p>
                                     <Button onClick={() => updateLike({variables: {jestId: jest._id}})}>LIKE</Button>
                                    
                                 </Card.Body>

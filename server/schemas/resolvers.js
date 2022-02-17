@@ -25,7 +25,7 @@ const resolvers = {
     return await Task.find();
     },
     allJests: async () => {
-      return await Jest.find({});
+      return await Jest.find();
     }
   },
 
@@ -93,27 +93,10 @@ const resolvers = {
     },
 
     updateLike: async (parent, { jestId }) => {
-      console.log(parent);
-      console.log("resolverssssssssss arg var", jestId)
+      // console.log("resolverssssssssss arg var", jestId)
       return Jest.findOneAndUpdate(
         {_id: jestId}, { $inc: {likes: 1}}, { new: true }
-      );
-      // if (context.user) {
-      //   console.log("UPDATELIKES FIRING", jestId);
-      //   const newLikesJest = await Jest.findOneAndUpdate(
-      //     // {_id: args._id}, {likes: args.likes}, { new: true}
-      //     {_id: jestId}
-      //   );
-      //   return newLikesJest;
-      
-      // }else {
-      //   console.log("not logged in, please return to login page to proceed.")
-      // }
-      
-        console.log("jest id from the resolvers", arg);
-        
-        // return newLikesJest;
-      
+      );      
     }
     
   },

@@ -23,8 +23,8 @@ export const ADD_USER = gql`
     }
   }
 `;
-// ============== ^^^^ can stay
-//  =====================below must change================
+
+
 export const SAVE_JEST = gql`
   mutation saveJest($postData: PostInput!) {
     saveJest(postData: $postData) {
@@ -41,6 +41,7 @@ export const SAVE_JEST = gql`
   }
 `;
 
+//remove jest based off id, and return id of object
 export const REMOVE_JEST = gql`
 mutation removeJest($_id: ID!){
   removeJest(jestId: $_id) {
@@ -72,6 +73,8 @@ mutation newJest($caption: String!, $image: String!){
 }
 `;
 
+
+//deletes a jest by id variable
 // export const DELETE_JEST = gql`
 // mutation deleteJest($jestId: ID!){
 //   deleteJest(jestId: $jestId) {
